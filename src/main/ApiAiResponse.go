@@ -4,6 +4,7 @@ package main
 type ApiAiResponse struct {
 	Lang string
 	DisplayText string
+	Speech string
 	/** json object */
 	Data string
 	ContextOut []string

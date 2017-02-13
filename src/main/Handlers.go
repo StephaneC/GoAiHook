@@ -34,7 +34,7 @@ func ApiAiHookHandler(w http.ResponseWriter, r *http.Request) {
 		log.Println("request.result.action "+response.DisplayText)
 		switch (request.Result.Action){
 		case "action.time":
-			response = ApiAiResponse{DisplayText:strconv.Itoa(time.Now().Hour())}
+			response = ApiAiResponse{DisplayText:strconv.Itoa(time.Now().Hour()), Speech:strconv.Itoa(time.Now().Hour()), Source: "SCA"}
 			break;
 		/** add your actions here */
 		default:
