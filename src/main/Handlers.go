@@ -44,6 +44,7 @@ func ApiAiHookHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	log.Println("response.displaytest "+response.DisplayText)
+	w.Header().Set("Content-type", "application/json")
 	json.NewEncoder(w).Encode(response)
 }
 
